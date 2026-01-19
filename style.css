@@ -49,7 +49,6 @@ body {
   color: var(--text-main);
   overflow-x: hidden;
 
-  /* Lebih halus */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -137,6 +136,30 @@ body {
   }
 }
 
+/* ===== Tagline (dibikin "designed", beda dari teks biasa) ===== */
+.tagline{
+  margin: 14px auto 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.86);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: 0.1px;
+  color: var(--text-main);
+
+  max-width: 36ch;
+  text-align: center;
+}
+
 /* Glass Cards */
 .card {
   background: var(--glass);
@@ -179,17 +202,16 @@ body {
 
 /* Documentation section */
 .doc-section {
-  position: relative; /* penting untuk edge fade */
+  position: relative;
   background: transparent;
   margin: 10px 0 14px;
 }
 
-/* Edge fade kiri/kanan biar keliatan bisa di-scroll */
 .doc-section::before,
 .doc-section::after {
   content: "";
   position: absolute;
-  top: 34px;              /* mulai di bawah label */
+  top: 34px;
   bottom: 0;
   width: 34px;
   pointer-events: none;
@@ -207,7 +229,7 @@ body {
   background: linear-gradient(270deg, var(--bg-color), transparent);
 }
 
-/* Carousel (premium smooth + scroll snap) */
+/* Carousel */
 .carousel {
   display: flex;
   overflow-x: auto;
@@ -271,7 +293,7 @@ body {
   line-height: 1.35;
 }
 
-/* Hint halus biar user ngeh bisa geser */
+/* Hint halus */
 @keyframes nudge {
   0%, 100% { transform: translateX(0); }
   50% { transform: translateX(-8px); }
@@ -313,6 +335,30 @@ body {
 
 .cta-primary:active {
   transform: translateY(0px) scale(0.99);
+}
+
+/* ===== CTA Subtext (lebih premium, tanpa ubah HTML) ===== */
+.cta-subtext{
+  margin: -6px 0 20px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  opacity: 0.92;
+  position: relative;
+}
+
+.cta-subtext::before,
+.cta-subtext::after{
+  content:"";
+  display:inline-block;
+  height: 1px;
+  width: 46px;
+  background: rgba(100,116,139,0.35);
+  vertical-align: middle;
+  margin: 0 12px;
 }
 
 /* Social cards */
@@ -396,6 +442,7 @@ a:focus-visible {
   font-size: 11px;
   color: var(--text-muted);
 }
+
 /* ===== Work Timeline ===== */
 .timeline {
   margin-top: 6px;
@@ -509,31 +556,28 @@ a:focus-visible {
     border-color: rgba(37, 99, 235, 0.28);
   }
 }
+
 /* === Highlight CURRENT timeline item (biru) === */
 .timeline-item.is-current {
   background: var(--accent-soft);
   border-radius: 18px;
   padding: 14px 12px;
   margin: 8px 0;
+  border: 1px solid rgba(37, 99, 235, 0.25);
 }
 
 .timeline-item.is-current .timeline-content {
   padding-right: 6px;
 }
 
-/* Border halus biar kelihatan aktif */
-.timeline-item.is-current {
-  border: 1px solid rgba(37, 99, 235, 0.25);
-}
-
-/* Dark mode tetap elegan */
 @media (prefers-color-scheme: dark) {
   .timeline-item.is-current {
     background: rgba(37, 99, 235, 0.16);
     border-color: rgba(37, 99, 235, 0.35);
   }
 }
-/* ===== GALLERY (STYLE MIRIP REFERENSI) ===== */
+
+/* ===== GALLERY ===== */
 .gallery-section {
   margin: 18px 0 6px;
 }
@@ -571,10 +615,8 @@ a:focus-visible {
   display: none;
 }
 
-/* ===== GALLERY FINAL (LANDSCAPE + CLEAN CAPTION) ===== */
-
 .gallery-card {
-  flex: 0 0 300px;              /* LEBAR → LANDSCAPE */
+  flex: 0 0 300px;
   background: #ffffff;
   border-radius: 22px;
   box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
@@ -590,7 +632,7 @@ a:focus-visible {
 }
 
 .gallery-image {
-  height: 120px;                /* PENDEK → LANDSCAPE */
+  height: 120px;
   overflow: hidden;
   border-radius: 22px 22px 0 0;
 }
@@ -603,7 +645,6 @@ a:focus-visible {
   display: block;
 }
 
-/* CAPTION BAWAH: KECIL, TENANG, ELEGAN */
 .gallery-caption {
   padding: 6px 12px 10px;
   font-size: 11px;
@@ -611,4 +652,143 @@ a:focus-visible {
   line-height: 1.25;
   color: var(--text-main);
   opacity: 0.68;
+}
+
+/* ===== Dark mode fine-tune khusus tagline & CTA subtext ===== */
+@media (prefers-color-scheme: dark){
+  .tagline{
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.12);
+    box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+    color: rgba(255,255,255,0.92);
+  }
+
+  .cta-subtext{
+    color: rgba(255,255,255,0.65);
+  }
+
+  .cta-subtext::before,
+  .cta-subtext::after{
+    background: rgba(255,255,255,0.18);
+  }
+}
+/* ================================
+   NEW LOOK: Tagline + CTA Subtext
+   (sesuai HTML kamu, tanpa ubah HTML)
+================================ */
+
+/* Tagline jadi "chip" yang keliatan designed */
+.tagline{
+  margin: 14px auto 0;
+  display: inline-block;
+
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.86);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 900;
+  letter-spacing: 0.1px;
+  color: var(--text-main);
+
+  max-width: 36ch;     /* biar rapih di mobile */
+  text-align: center;
+}
+
+/* CTA subtext jadi "signature line" (ada garis kiri-kanan) */
+.cta-subtext{
+  margin: -6px 0 20px;
+  text-align: center;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+
+  color: var(--text-muted);
+  opacity: 0.92;
+
+  position: relative;
+}
+
+.cta-subtext::before,
+.cta-subtext::after{
+  content:"";
+  display:inline-block;
+  height: 1px;
+  width: 46px;
+  background: rgba(100,116,139,0.35);
+  vertical-align: middle;
+  margin: 0 12px;
+}
+
+/* Dark mode khusus tagline & cta-subtext (cukup satu blok) */
+@media (prefers-color-scheme: dark){
+  .tagline{
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.12);
+    box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+    color: rgba(255,255,255,0.92);
+  }
+
+  .cta-subtext{
+    color: rgba(255,255,255,0.65);
+  }
+
+  .cta-subtext::before,
+  .cta-subtext::after{
+    background: rgba(255,255,255,0.18);
+  }
+}
+/* CTA subtext jadi chip premium */
+.cta-subtext{
+  margin: -8px 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 12px;
+  border-radius: 999px;
+
+  background: rgba(37, 99, 235, 0.10);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  text-transform: none;            /* biar lebih human */
+  color: var(--accent);
+  opacity: 1;
+}
+
+/* Matikan garis kiri-kanan kalau sebelumnya kamu pakai */
+.cta-subtext::before,
+.cta-subtext::after{
+  display: none !important;
+}
+
+@media (prefers-color-scheme: dark){
+  .cta-subtext{
+    background: rgba(37, 99, 235, 0.16);
+    border-color: rgba(37, 99, 235, 0.30);
+    color: rgba(147,197,253,0.95);
+  }
+}
+/* Satukan badge + tagline secara visual */
+.profile-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-header .badge{
+  margin-bottom: 6px;
+}
+
+.profile-header .tagline{
+  margin-top: 0;
 }
