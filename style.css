@@ -863,3 +863,36 @@ a:focus-visible {
   bottom: 6px !important;
   transform: translate(0, 0) translateZ(0) !important;
 }
+/* FIX CTA: jangan pakai --text-main untuk background */
+:root{
+  --cta-bg: #0f172a;              /* gelap */
+  --cta-bg-hover: #0b1227;        /* hover gelap sedikit */
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --cta-bg: #0b1227;            /* tetap gelap di dark mode */
+    --cta-bg-hover: #0a1022;
+  }
+}
+
+/* Kunci semua state link CTA */
+.cta-primary,
+.cta-primary:link,
+.cta-primary:visited,
+.cta-primary:hover,
+.cta-primary:active,
+.cta-primary:focus,
+.cta-primary:focus-visible{
+  background: var(--cta-bg) !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* Hover */
+@media (hover:hover) and (pointer:fine){
+  .cta-primary:hover{
+    background: var(--cta-bg-hover) !important;
+    filter: none !important; /* biar konsisten */
+  }
+}
