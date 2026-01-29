@@ -8,7 +8,7 @@
   <meta name="description" content="Raju Nuardi Akbar — Data Analyst. Dokumentasi, pengalaman, dan tautan penting dalam satu halaman." />
   <meta name="theme-color" content="#0b1020" />
 
-  <!-- Open Graph (untuk preview saat dibagikan) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Raju Nuardi Akbar | Data Analyst" />
   <meta property="og:description" content="Dokumentasi, pengalaman, dan tautan penting dalam satu halaman." />
@@ -34,14 +34,14 @@
 </head>
 
 <body>
-  <!-- Background blobs (dekoratif, jadi aria-hidden) -->
+  <!-- Background blobs -->
   <div class="background-blobs" aria-hidden="true">
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
   </div>
 
   <main class="container">
-    <header class="profile-header">
+    <header class="profile-header reveal">
       <div class="profile-ring">
         <img
           src="images/Profile.webp"
@@ -52,226 +52,183 @@
           loading="eager"
           decoding="async"
         />
+        <span class="status-dot" aria-hidden="true"></span>
       </div>
 
       <h1 class="name">Raju Nuardi Akbar</h1>
 
-      <!-- Role -->
       <p class="badge" aria-label="Peran">Data Analyst</p>
 
-      <!-- ✅ NEW: Value Proposition -->
       <p class="tagline" aria-label="Value proposition">
         Turning data into actionable insights for better decisions
       </p>
     </header>
 
-   <!-- WORK TIMELINE -->
-<section class="card anim-1" aria-label="Work Timeline">
-  <span class="label">Professional Journey</span>
+    <!-- WORK TIMELINE -->
+    <section class="card anim-1 reveal" aria-label="Work Timeline">
+      <span class="label">Professional Journey</span>
 
-  <div class="timeline">
+      <div class="timeline">
+        <div class="timeline-item is-current">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <div class="timeline-top">
+              <p class="timeline-role">
+                <strong>Open to Work</strong> ·
+                <span class="timeline-company">Data Analyst</span>
+              </p>
+              <span class="timeline-pill">Available</span>
+            </div>
 
-    <!-- KONDISI SEKARANG (BIRU) -->
-    <div class="timeline-item is-current">
-  <div class="timeline-dot" aria-hidden="true"></div>
-  <div class="timeline-content">
-    <div class="timeline-top">
-      <p class="timeline-role">
-        <strong>Open to Work</strong> · 
-        <span class="timeline-company">Data Analyst</span>
-      </p>
-      <span class="timeline-pill">Available</span>
-    </div>
-
-    <p class="timeline-meta"></p>
-
-    <p class="timeline-desc">
-     
-    </p>
-  </div>
-</div>
-
-
-    <!-- RIWAYAT TERBARU (AKTIFKAN NANTI JIKA SUDAH ADA) -->
-    <!--
-    <div class="timeline-item">
-      <div class="timeline-dot" aria-hidden="true"></div>
-      <div class="timeline-content">
-        <p class="timeline-role">
-          <strong>Data Analyst</strong> · 
-          <span class="timeline-company">PT Contoh Data</span>
-        </p>
-        <p class="timeline-meta">2025 — 2025 · Full-time</p>
-        <p class="timeline-desc">
-          Menghubungkan data → insight → tindakan melalui SQL, BI dashboard, 
-          dan eksperimen untuk meningkatkan kinerja dan efisiensi proses.
-        </p>
+            <p class="timeline-meta"></p>
+            <p class="timeline-desc"></p>
+          </div>
+        </div>
       </div>
-    </div>
-    -->
-
-    <!-- RIWAYAT LEBIH LAMA (OPSIONAL) -->
-    <!--
-    <div class="timeline-item">
-      <div class="timeline-dot" aria-hidden="true"></div>
-      <div class="timeline-content">
-        <p class="timeline-role">
-          <strong>Junior Data Analyst</strong> · 
-          <span class="timeline-company">[Perusahaan Sebelumnya]</span>
-        </p>
-        <p class="timeline-meta">2024 — 2025 · Internship / Contract</p>
-        <p class="timeline-desc">
-          Membangun dashboard KPI, automation reporting, dan analisis funnel performa.
-        </p>
-      </div>
-    </div>
-    -->
-
-  </div>
-</section>
-
+    </section>
 
     <!-- EDUCATION -->
-    <section class="card anim-2" aria-labelledby="edu-label">
+    <section class="card anim-2 reveal" aria-labelledby="edu-label">
       <p class="label" id="edu-label">Education</p>
 
       <div class="edu-content">
         <div class="edu-icon" aria-hidden="true">🎓</div>
         <div>
           <p class="edu-title"><strong>Universitas Putra Indonesia "YPTK" Padang</strong></p>
-          <p class="edu-sub">S1 Teknik Informatika </p>
+          <p class="edu-sub">S1 Teknik Informatika</p>
         </div>
       </div>
     </section>
 
-    <!-- DOCUMENTATION -->
     <!-- GALLERY -->
-<section class="gallery-section anim-3" aria-label="Gallery">
-  <div class="gallery-header">
-    <span class="gallery-title">GALLERY</span>
-    <span class="gallery-arrow">→</span>
-  </div>
-
-  <div class="gallery-track">
-    <article class="gallery-card">
-      <div class="gallery-image">
-        <img src="images/documentation/DCM1.webp" alt="Data Visualization Workshop" />
+    <section class="gallery-section anim-3 reveal" aria-label="Gallery">
+      <div class="gallery-header">
+        <span class="gallery-title">GALLERY</span>
+        <span class="gallery-arrow">→</span>
       </div>
-     
-    </article>
 
-    <article class="gallery-card">
-      <div class="gallery-image">
-        <img src="images/documentation/DMC2.webp" alt="Event & Community Talk" />
+      <div class="gallery-track">
+        <article class="gallery-card">
+          <div class="gallery-image">
+            <img src="images/documentation/DCM1.webp" alt="Data Visualization Workshop" />
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <div class="gallery-image">
+            <img src="images/documentation/DMC2.webp" alt="Event & Community Talk" />
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <div class="gallery-image">
+            <img src="images/documentation/DMC3.webp" alt="Analytics Project" />
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <div class="gallery-image">
+            <img src="images/documentation/DMC4.webp" alt="Event & Community Talk" />
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <div class="gallery-image">
+            <img src="images/documentation/DMC5.webp" alt="Event & Community Talk" />
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <div class="gallery-image">
+            <img src="images/documentation/DMC6.webp" alt="Event & Community Talk" />
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <div class="gallery-image">
+            <img src="images/documentation/DMC7.webp" alt="Event & Community Talk" />
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <div class="gallery-image">
+            <img src="images/documentation/DMC8.webp" alt="Event & Community Talk" />
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <div class="gallery-image">
+            <img src="images/documentation/DMC9.webp" alt="Event & Community Talk" />
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <div class="gallery-image">
+            <img src="images/documentation/DMC10.webp" alt="Event & Community Talk" />
+          </div>
+        </article>
       </div>
-      
-    </article>
-
-    <article class="gallery-card">
-      <div class="gallery-image">
-        <img src="images/documentation/DMC3.webp" alt="Analytics Project" />
-      </div>
-    
-    </article>
-
-    <article class="gallery-card">
-      <div class="gallery-image">
-        <img src="images/documentation/DMC4.webp" alt="Event & Community Talk" />
-      </div>
-      
-    </article>
-
-    <article class="gallery-card">
-      <div class="gallery-image">
-        <img src="images/documentation/DMC5.webp" alt="Event & Community Talk" />
-      </div>
-     
-    </article>
-
-     <article class="gallery-card">
-      <div class="gallery-image">
-        <img src="images/documentation/DMC6.webp" alt="Event & Community Talk" />
-      </div>
-     
-    </article>
-
-     <article class="gallery-card">
-      <div class="gallery-image">
-        <img src="images/documentation/DMC7.webp" alt="Event & Community Talk" />
-      </div>
-      
-    </article>
-
-     <article class="gallery-card">
-      <div class="gallery-image">
-        <img src="images/documentation/DMC8.webp" alt="Event & Community Talk" />
-      </div>
-    
-    </article>
-
- <article class="gallery-card">
-      <div class="gallery-image">
-        <img src="images/documentation/DMC9.webp" alt="Event & Community Talk" />
-      </div>
-    
-    </article>
-
-     <article class="gallery-card">
-      <div class="gallery-image">
-        <img src="images/documentation/DMC10.webp" alt="Event & Community Talk" />
-      </div>
-     
-    </article>
-
-  </div>
-</section>
+    </section>
 
     <!-- CTA -->
-<a href="https://rajunuardi.github.io/portfolio-raju/"
-   class="cta-primary anim-4"
-   target="_blank"
-   rel="noopener"
-   aria-label="Buka portfolio lengkap Raju Nuardi">
-  <span>Explore My Full Portfolio</span>
-  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-    <path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/>
-  </svg>
-</a>
+    <a href="https://rajunuardi.github.io/portfolio-raju/"
+       class="cta-primary anim-4 reveal"
+       target="_blank"
+       rel="noopener"
+       aria-label="Buka portfolio lengkap Raju Nuardi">
+      <span>Explore My Full Portfolio</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/>
+      </svg>
+    </a>
 
-<!--  NEW: CTA helper text (bukan tombol) -->
-<p class="cta-subtext anim-4" aria-label="Call to action tambahan">
-  Recruiters & collaborators are welcome
-</p>
+    <p class="cta-subtext anim-4 reveal" aria-label="Call to action tambahan">
+      Recruiters & collaborators are welcome
+    </p>
 
-<!-- SOCIAL -->
-<section class="social-grid anim-5" aria-label="Tautan sosial">
-  <a href="https://www.linkedin.com/in/rajunuardiakbar/"
-     class="social-card"
-     target="_blank"
-     rel="noopener"
-     aria-label="Buka LinkedIn Raju Nuardi">
-    <span class="social-icon" aria-hidden="true">💼</span>
-    <p>LinkedIn</p>
-  </a>
+    <!-- SOCIAL -->
+    <section class="social-grid anim-5 reveal" aria-label="Tautan sosial">
+      <a href="https://www.linkedin.com/in/rajunuardiakbar/"
+         class="social-card"
+         target="_blank"
+         rel="noopener"
+         aria-label="Buka LinkedIn Raju Nuardi">
+        <span class="social-icon" aria-hidden="true">💼</span>
+        <p>LinkedIn</p>
+      </a>
 
- <a href="https://mail.google.com/mail/?view=cm&to=rajunuardi@gmail.com"
-   class="social-card"
-   target="_blank"
-   rel="noopener"
-   aria-label="Kirim email ke Raju Nuardi via Gmail">
-  <span class="social-icon" aria-hidden="true">✉️</span>
-  <p>Email</p>
-</a>
+      <a href="https://mail.google.com/mail/?view=cm&to=rajunuardi@gmail.com"
+         class="social-card"
+         target="_blank"
+         rel="noopener"
+         aria-label="Kirim email ke Raju Nuardi via Gmail">
+        <span class="social-icon" aria-hidden="true">✉️</span>
+        <p>Email</p>
+      </a>
+    </section>
 
-</section>
+    <footer class="footer reveal">
+      <p>&copy; <span id="year">2026</span> Raju Nuardi. Analyzing Data. Driving Strategy.</p>
+    </footer>
+  </main>
 
-<footer class="footer">
-  <p>&copy; <span id="year">2026</span> Raju Nuardi. Analyzing Data. Driving Strategy.</p>
-</footer>
-
-
+  <!-- Script harus di bawah (biar element sudah ada) -->
   <script>
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const els = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-visible");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    els.forEach((el) => io.observe(el));
   </script>
 </body>
 </html>
